@@ -59,22 +59,22 @@ var waterBlocks = function (blocks) {
       
       //reassign tempEnd as needed
       if (height >= tempEnd.height) {
-        tempEnd.location = index;
-        tempEnd.height = height;
         
         //if we get here, we know we need to push the range and also reset both temps
         ranges.push({
           start: tempBegin.location,
-          end: tempEnd.location,
-          maxHeight: tempEnd.height
+          end: index,
+          maxHeight: height
         });
         
+        tempEnd.location = index;
+        tempEnd.height = height;
         tempBegin.location = index;
         tempBegin.height = height;
-        tempEnd.location = index + 1;
-        tempEnd.height = blocks[index + 1];
+
       }
       
+      //assign a final range at to the end of the array
       if (index === blocks.length - 1) {
         ranges.push({
           start: tempBegin.location,
@@ -82,7 +82,6 @@ var waterBlocks = function (blocks) {
           maxHeight: height
         });
       }
-      //assign a final range at to the end of the array
     }
   });
   
@@ -92,7 +91,6 @@ var waterBlocks = function (blocks) {
       if (blocks[i] < range.maxHeight) {
         result += (range.maxHeight - blocks[i]);
       }
-      console.log(range, result);
     }
   });
   

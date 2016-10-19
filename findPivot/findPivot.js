@@ -54,3 +54,47 @@ var findPivot = function(array, start, end) {
 };
 
 module.exports = findPivot;
+
+
+// Solution with log time complexity 
+var findPivot = function(arr, start, end) {
+  start = start || 0;
+  end = end || arr.length - 1; 
+  var middle = Math.ceil((start + end) / 2);
+  if (arr[start] < arr[middle]) { // Check if this section (start -> mid, the LEFT half) is sorted
+    // This section is sorted
+    // Is there another section of the array remaining to check? (it would be the RIGHT half)
+    if (end === middle) { // nothing left, we didn't find the pivot
+      return null;
+    } else { // something left, check the RIGHT half
+      return findPivot(arr, middle, end);
+    }
+  } else {
+    // This section is NOT sorted, so the pivot is in this section (start -> mid)
+    if (middle - start === 1) { // if start and mid are immediately next to each other, we found pivot
+      return middle;  
+    } else { // otherwise, we should continue our search on this section of the array
+      return findPivot(arr, start, middle); 
+    }
+  }
+};
+
+//can be refactored into 
+var findPivot = function(arr, start, end) {
+  start = start || 0;
+  end = end || arr.length - 1; 
+  var middle = Math.ceil((start + end) / 2);
+  if (end === middle) {
+    // We've combined our two stop cases. 
+    // Since we're always checking the LEFT half first, 
+    // if the middle === end, it means we've finished our search
+    // Does this small section contain the pivot? if not, we didn't find one
+    // if yes, the pivot index is end/middle
+    return arr[start] < arr[end] ? null : middle;
+  }
+  if (arr[start] < arr[middle]) {
+    return findPivot(arr, middle, end);
+  } else {
+    return findPivot(arr, start, middle);
+  }
+};
