@@ -50,30 +50,30 @@ var findOverlap = function(rectangle1, rectangle2) {
 };
 
 
-var findPos(rectangle, direction) {
+var findPos = function(rectangle, direction) {
 
-    var pos = rectangle[0];
-    
-    rectangle.forEach(coord => {
-        if (positions[direction](coord, pos)) {
-            pos = coord;
-        }
-    });
-    
-    return pos;
-}
+  var pos = rectangle[0];
+  
+  rectangle.forEach(coord => {
+      if (positions[direction](coord, pos)) {
+          pos = coord;
+      }
+  });
+  
+  return pos;
+};
 
 var positions = {
-    lowerLeft: function(coord, pos) {
-        return coord[0] < pos[0] && coord[1] < pos[1];
-    },
-    upperRight: function(coord, pos) {
-        return coord[0] > pos[0] && coord[1] > lowest[1];
-    },
-    lowerRight: function(coord, pos) {
-        return coord[0] > pos[0] && coord[1] < pos[1];
-    },
-    upperLeft: function(coord, pos) {
-        return coord[0] < pos[0] && coord[1] > pos[1];
-    }
+  lowerLeft: function(coord, pos) {
+    return coord[0] < pos[0] && coord[1] < pos[1];
+  },
+  upperRight: function(coord, pos) {
+    return coord[0] > pos[0] && coord[1] > lowest[1];
+  },
+  lowerRight: function(coord, pos) {
+    return coord[0] > pos[0] && coord[1] < pos[1];
+  },
+  upperLeft: function(coord, pos) {
+    return coord[0] < pos[0] && coord[1] > pos[1];
+  }
 };
