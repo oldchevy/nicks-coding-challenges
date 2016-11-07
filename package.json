@@ -4,7 +4,7 @@
   "description": "Nicks coding challenges",
   "main": "N/A",
   "scripts": {
-    "test": "N/A"
+    "test": "mocha test.all.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/oldchevy/nicks-coding-challenges/issues"
   },
-  "homepage": "https://github.com/oldchevy/nicks-coding-challenges#readme"
+  "homepage": "https://github.com/oldchevy/nicks-coding-challenges#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
 }
