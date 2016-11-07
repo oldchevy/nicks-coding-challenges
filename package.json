@@ -4,7 +4,7 @@
   "description": "Nicks coding challenges",
   "main": "N/A",
   "scripts": {
-    "test": "N/A"
+    "test": "mocha test.all.js"
   },
   "repository": {
     "type": "git",
