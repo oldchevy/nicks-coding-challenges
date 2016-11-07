@@ -1,0 +1,28 @@
+{
+  "name": "nicks-coding-challenges",
+  "version": "1.0.0",
+  "description": "Nicks coding challenges",
+  "main": "N/A",
+  "scripts": {
+    "test": "N/A"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oldchevy/nicks-coding-challenges.git"
+  },
+  "keywords": [
+    "challenges",
+    "coding",
+    "interview",
+    "prep"
+  ],
+  "author": "Nick Olszowy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oldchevy/nicks-coding-challenges/issues"
+  },
+  "homepage": "https://github.com/oldchevy/nicks-coding-challenges#readme",
+  "dependencies": {
+    "mocha": "^3.1.2"
+  }
+}

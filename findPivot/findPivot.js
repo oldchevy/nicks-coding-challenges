@@ -10,7 +10,7 @@ Example: ['dog', 'eagle', 'falcon', 'apple', 'bear', 'cat']  => will return a pi
 */
 
 var findPivot = function(array, start, end) {
-  
+  //Todo: Complete me!
 };
 
 module.exports = findPivot;
