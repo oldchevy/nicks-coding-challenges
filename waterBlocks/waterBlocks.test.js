@@ -1,6 +1,6 @@
 //Test suite for findPivot
 var expect = require('chai').expect;
-var findPivot = require('./waterBlocks');
+var waterBlocks = require('./waterBlocks');
 
 describe('Water Blocks', function() {
 
@@ -33,7 +33,7 @@ describe('Water Blocks', function() {
 
   testArrays.forEach(function(test) {
     it('should calculate valid water spots for ' + JSON.stringify(test.arr), function() {
-      expect(findPivot(test.arr)).to.equal(test.answer);
+      expect(waterBlocks(test.arr)).to.equal(test.answer);
     });
   });
 
