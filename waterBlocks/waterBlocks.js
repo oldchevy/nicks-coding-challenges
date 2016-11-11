@@ -85,7 +85,6 @@ var waterBlocks = function (blocks) {
     }
   });
   
-  console.log(ranges);
   ranges.forEach(range => {
     for (var i = range.start; i <= range.end; i++) {
       if (blocks[i] < range.maxHeight) {
