@@ -13,6 +13,7 @@ var BTree = function(val) {
   this.val = val;
 };
 
+//Maybe you need this, maybe you don't. Idk
 BTree.prototype.add = function(val, type) {
 
   if (type === 'right') {
@@ -28,43 +29,7 @@ BTree.prototype.add = function(val, type) {
 };
 
 BTree.prototype.pathsToSum = function(target, sum, hash) {
-
-  //There is a very in-depth walk through of how this works in 
-  //Cracking the Coding Interview... I would recommend looking at
-  //that, but basically you are tracking how many times you've
-  //seen a sum. If you're on a node and looking at the runningsum - target,
-  //and you find something in the hash, you know there was a sequence
-  //seen where the sum was 'target', therefore you put it in your total count.
-
-  //If that doesn't immediately make sense to you, 
-  //definitely go look at the CTCI passage.
-  //It took me a long time to wrap my head around this
-
-  sum = sum === undefined ? this.val : sum + this.val;
-  hash = hash || {};
-
-  var count = hash[sum - target] || 0;
-  
-  if (sum === target) {
-    count++;
-  }
-
-  hash[sum] = hash[sum] ? hash[sum]++ : 1;
-
-  if (this.left) {
-    count += this.left.pathsToSum(target, sum, hash);
-  }
-  if (this.right) {
-    count += this.right.pathsToSum(target, sum, hash);    
-  }
-
-  hash[sum]--;
-  if (hash[sum] === 0) {
-    delete hash[sum];
-  }
-
-  return count;
-
+  //Todo: Implement this~~~
 };
 
 

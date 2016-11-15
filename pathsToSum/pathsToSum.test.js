@@ -21,7 +21,7 @@ describe('Paths to Sum with a B-Tree', function() {
     expect(test.pathsToSum(8)).to.equal(4);
   });
 
-  it('should be able to find paths that dont start at the root', function() {
+  it('should be able to find paths that don\'t start at the root', function() {
     expect(test.pathsToSum(5)).to.equal(2);
     expect(test.pathsToSum(1)).to.equal(2);
   });
