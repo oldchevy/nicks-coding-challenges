@@ -7,68 +7,23 @@
 
 
 var Shelter = function() {
-  this._dogs = new List();
-  this._cats = new List();
-  this._count = 0;
+  //Do stuff here.
 };
 
-Shelter.prototype.enqueue = function(pet, type) {
-
-  this._count++;
-  var data = {
-    time: this._count,
-    data: pet
-  };
-
-  if (type === 'cat') {
-    this._cats.addToTail(data);
-  } else {
-    this._dogs.addToTail(data);
-  }
-
+Shelter.prototype.enqueue = function(pet) {
+  //Maybe more args are needed, or maybe not
 };
 
 Shelter.prototype.dequeueAny = function(pet) {
-  //compare dates of the heads of both lists
-  var result = null;
-
-  if (!this._dogs.head && !this._cats.head) {
-    return result;
-  } else if (!this._dogs.head) {
-    result = this._cats.removeHead();
-    return result.val.data;
-  } else if (!this._cats.head) {
-    result = this._dogs.removeHead();
-    return result.val.data;
-  } else {
-    if (this._dogs.head.val.time < this._cats.head.val.time) {
-      var result = this._dogs.removeHead();
-      return result.val.data;
-    } else {
-      var result = this._cats.removeHead();
-      return result.val.data;
-    }    
-  }
+  //Todo
 };
 
-Shelter.prototype.dequeueDog = function(pet) {
-  var result = null;
-
-  if (this._dogs.head) {
-    result = this._dogs.removeHead();
-  }
-
-  return result ? result.val.data : result;
+Shelter.prototype.dequeueDog = function() {
+  //Todo
 };
 
-Shelter.prototype.dequeueCat = function(pet) {
-  var result = null;
-
-  if (this._cats.head) {
-    result = this._cats.removeHead();
-  }
-
-  return result ? result.val.data : result;
+Shelter.prototype.dequeueCat = function() {
+  //Todo
 };
 
 
