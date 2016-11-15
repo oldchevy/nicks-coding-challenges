@@ -59,9 +59,7 @@ BTree.prototype.pathsToSum = function(target, sum, hash) {
   }
 
   hash[sum]--;
-  if (hash[sum] === 0) {
-    delete hash[sum];
-  }
+
 
   return count;
 
