@@ -7,3 +7,4 @@ require('./combineParens/combineParens.test.js');
 require('./rotateMatrix/rotateMatrix.test.js');
 require('./asyncMemoize/asyncMemoize.test.js');
 require('./petShelter/petShelter.test.js');
+require('./pathsToSum/pathsToSum.test.js');
