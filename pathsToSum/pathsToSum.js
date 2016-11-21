@@ -13,7 +13,6 @@ var BTree = function(val) {
   this.val = val;
 };
 
-//Maybe you need this, maybe you don't. Idk
 BTree.prototype.add = function(val, type) {
 
   if (type === 'right') {
@@ -29,7 +28,9 @@ BTree.prototype.add = function(val, type) {
 };
 
 BTree.prototype.pathsToSum = function(target, sum, hash) {
-  //Todo: Implement this~~~
+
+  //Todo: implement me!
+
 };
 
 
