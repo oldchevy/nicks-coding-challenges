@@ -93,20 +93,3 @@ BST.prototype.deserialize = function (string, array, min, max) {
 
 module.exports = BST;
 
-var tree = new BST(6);
-tree.insert(4);
-tree.insert(7);
-tree.insert(1);
-tree.insert(5);
-tree.insert(9);
-tree.insert(10);
-tree.insert(11);
-tree.insert(12);
-
-console.log(tree);
-var serialized = tree.serialize();
-console.log(serialized);
-var treeSomeWhereElse = new BST();
-treeSomeWhereElse.deserialize(serialized);
-console.log(treeSomeWhereElse);
-

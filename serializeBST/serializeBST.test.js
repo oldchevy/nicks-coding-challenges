@@ -27,6 +27,11 @@ describe('Serialize / Deserialize BST', function() {
     tree.insert(10);
     tree.insert(11);
     tree.insert(12);
+
+    serialized = tree.serialize();
+    treeSomeWhereElse = new BST();
+    treeSomeWhereElse.deserialize(serialized);
+    expect(tree).to.deep.equal(treeSomeWhereElse);
     
   });
 });

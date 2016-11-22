@@ -5,8 +5,6 @@ var BTree = require('./pathsToSum');
 
 describe('Paths to Sum with a B-Tree', function() {
 
-  //build up the example
-
   var test = new BTree(2);
   test.right = new BTree(5);
   test.right.right = new BTree(1);
