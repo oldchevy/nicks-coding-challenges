@@ -9,3 +9,4 @@ require('./asyncMemoize/asyncMemoize.test.js');
 require('./petShelter/petShelter.test.js');
 require('./pathsToSum/pathsToSum.test.js');
 require('./serializeBST/serializeBST.test.js');
+require('./spaceMining/spaceMining.test.js');
