@@ -15,11 +15,11 @@ as neighboring. That is, if the ship stops at the last asteroid, it can never st
 Ex: [10, 3, 2, 5, 7, 8] --> 19, which was taken from 10, 2, and 7
 */
 
-var badNeighbors = function(neighbors) {
+var spaceMining = function(neighbors) {
   //Todo: implement me!
   //Hint - this problem might be done recursively, or in linear time with Dynamic Programming techniques
 };
 
 
 
-module.exports = badNeighbors;
+module.exports = spaceMining;

@@ -21,7 +21,7 @@ describe('Space Mining', function() {
   ];
 
   testArrays.forEach(function(test) {
-    it('should find the maximum donation from these neighbors: ' + JSON.stringify(test.arr), function() {
+    it('should find the maximum resources from this asteroid map: ' + JSON.stringify(test.arr), function() {
       expect(spaceMining(test.arr)).to.deep.equal(test.answer);
     });
   });
