@@ -1,8 +1,8 @@
 //Test suite for rotateMatrix
 var expect = require('chai').expect;
-var badNeighbors = require('./badNeighbors');
+var spaceMining = require('./spaceMining');
 
-describe('Alternate Mining', function() {
+describe('Space Mining', function() {
 
   var testArrays = [
     { arr: [10, 3, 2, 5, 7, 8],
@@ -21,8 +21,8 @@ describe('Alternate Mining', function() {
   ];
 
   testArrays.forEach(function(test) {
-    it('should find the maximum donation from these neighbors: ' + JSON.stringify(test.arr), function() {
-      expect(badNeighbors(test.arr)).to.deep.equal(test.answer);
+    it('should find the maximum resources from this asteroid map: ' + JSON.stringify(test.arr), function() {
+      expect(spaceMining(test.arr)).to.deep.equal(test.answer);
     });
   });
 

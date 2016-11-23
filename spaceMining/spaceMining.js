@@ -15,7 +15,7 @@ as neighboring. That is, if the ship stops at the last asteroid, it can never st
 Ex: [10, 3, 2, 5, 7, 8] --> 19, which was taken from 10, 2, and 7
 */
 
-var badNeighbors = function(neighbors) {
+var spaceMining = function(neighbors) {
 
   //Defining the beginning of the recurrence relation
   var DParray = new Array(neighbors.length);
@@ -39,7 +39,7 @@ var badNeighbors = function(neighbors) {
     } 
 
     //For the last entry, we have to alter our recurrence relation slightly
-    //only if the first entry was taken
+    //but only if the first entry was taken
     //in that case we check whether it would be better to take the last or first
     //AKA, subtract out the first and see which entry is bigger
     if (i === neighbors.length - 1 && firstTaken) {
@@ -53,4 +53,4 @@ var badNeighbors = function(neighbors) {
 
 
 
-module.exports = badNeighbors;
+module.exports = spaceMining;

@@ -13,9 +13,15 @@ If you don't have mocha yet, you can get it with npm. I recommend installing glo
 
 Additionally, some of the tests make use of the new ES6 Javascript language features. To be able to run these tests, use the node version manager, `nvm`, to get Node v6 or higher. To get Node v6, use `nvm install v6` then `nvm use v6`.
 
-##Current Test Coverage (Nov. 6, 2016)
+###Current Test Coverage (Nov. 6, 2016)
 
 Please feel free to make a PR with test cases for these problems:
 
 * rectangleOverlap
 * quickSort
+
+###Challenges
+
+#####Async Memo-ize
+
+(asynchronous) Create a mix-in that memoizes a functions results from previously called arguments. However, the function will always be asynchronous. This means if a memoized async function is called multiple times before a value has returned and been stored in the memo from the first call, you must figure out how to detect that and trigger all the callbacks once the memo has been created, in the original order they were passed to the memoized function.
