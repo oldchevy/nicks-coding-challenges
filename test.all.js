@@ -10,3 +10,5 @@ require('./petShelter/petShelter.test.js');
 require('./pathsToSum/pathsToSum.test.js');
 require('./serializeBST/serializeBST.test.js');
 require('./spaceMining/spaceMining.test.js');
+require('./dikstrasShortestPath/shortestPath.test.js');
+require('./excelColumns/excelColumns.test.js');
