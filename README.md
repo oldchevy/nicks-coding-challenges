@@ -13,12 +13,14 @@ If you don't have mocha yet, you can get it with npm. I recommend installing glo
 
 Additionally, some of the tests make use of the new ES6 Javascript language features. To be able to run these tests, use the node version manager, `nvm`, to get Node v6 or higher. To get Node v6, use `nvm install v6` then `nvm use v6`.
 
-###Current Test Coverage (Nov. 6, 2016)
+###Current Test Coverage (Jan. 4, 2017)
 
 Please feel free to make a PR with test cases for these problems:
 
 * rectangleOverlap
 * quickSort
+* heapClass
+* minCoinSum
 
 ###Challenges
 
@@ -36,6 +38,14 @@ Please feel free to make a PR with test cases for these problems:
 #####Find Pivot
 
 (searching) You are given a sorted array of words, except it might have a pivot somewhere in it. Find the pivot and return its index, if it exists.
+
+#####Heap Class
+
+(trees) A heap is a type of priority queue which uses a binary tree represented as an array. This tree is special in that nodes below a parent node are guaranteed to be ordered relative to the parent. However order by level is not at all guaranteed. By swapping parent and child nodes when appropriate, we are able to have O(1) lookup of the min or max of a heap, and O(logN) insertion and removal.
+
+#####Min Coin Sum
+
+(greedy) Use recursion to figure out the minimum number of coins needed to make change for a denomination of the British Pound.
 
 #####Paths to Sum
 
