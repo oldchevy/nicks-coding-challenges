@@ -30,6 +30,9 @@ Please feel free to make a PR with test cases for these problems:
 
 (recursive) For a given number of parens, output all the unique and valid combinations of open and closing paren sequences. This problem has several equally valid approaches.
 
+##### Excel Columns
+(recursive) Given a column number which begins with zero, find the appropriate Excel column header. This problem is an exercise in thinking about digits in base 26.
+
 #####Find Pivot
 
 (searching) You are given a sorted array of words, except it might have a pivot somewhere in it. Find the pivot and return its index, if it exists.
