@@ -17,7 +17,7 @@ describe('Dijkstra\'s shortest path finding algorithm', () => {
   ];
 
   var solution1 = 4;
-  var solution2 = 4;
+  var solution2 = 10;
 
   //pass the nodes and edges to our graph class to instantiate it
   var graphInstance = new Graph(nodeValues, edges);
