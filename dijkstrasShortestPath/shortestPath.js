@@ -1,13 +1,16 @@
+//Make use of a heap, maybe you already have one implemented?!
 var Heap = require('../heapClass/heap.js');
 
+//I'm giving you this basic graph data structure to hold relations
 var Graph = function(nodes, edges) {
   this.nodes = {};
   
+  //The array being declared will hold the edge relations
   nodes.forEach(node => {
     this.nodes[node] = [];
   });
 
-  //undirected graph
+  //undirected graph is bi-directional, we represent this by adding to the edge list for both nodes
   edges.forEach(edge => {
     this.nodes[edge[0]].push({to: edge[1], weight: edge[2]});
     this.nodes[edge[1]].push({to: edge[0], weight: edge[2]});
@@ -18,14 +21,19 @@ Graph.prototype.shortestPath = function(nodeA, nodeB) {
   
   //init visited hash
   var visited = {};
-  visited[nodeA] = Infinity;
 
   //from the node we're visiting, see where we can go
   var nodesToTraverse = [];
   var working;
-  var comparator = (a, b) => a.path - b.path;
+  var comparator = (a, b) => {
+    if (a && b) {
+      return a.path - b.path;
+    } else {
+      return Infinity;
+    }
+  };
   var heap = new Heap(comparator);
-  heap.add({
+  heap.insert({
     node: nodeA,
     path: 0
   });
@@ -35,7 +43,6 @@ Graph.prototype.shortestPath = function(nodeA, nodeB) {
     //take off the top of the heap
     working = heap.remove();
     nodesToTraverse = this.nodes[working.node];
-    
     if (working.node === nodeB) {
       return working.path;
     }
@@ -45,15 +52,16 @@ Graph.prototype.shortestPath = function(nodeA, nodeB) {
       visited[working.node] = true;
 
       nodesToTraverse.forEach(node => {
-        heap.add({
+        heap.insert({
           node: node.to,
           path: working.path + node.weight
         });
       });
     }
   }
-
-  return 'no path to specified node ' + nodeB;
+  
+  //we weren't able to find a solution
+  return undefined;
 
 };
 

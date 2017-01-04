@@ -13,19 +13,25 @@ describe('Dijkstra\'s shortest path finding algorithm', () => {
     ['d', 'e', 4],
     ['e', 'f', 6],
     ['d', 'g', 2],
-    ['f', 'e', 3]
+    ['f', 'd', 3]
   ];
+
+  var solution1 = 4;
+  var solution2 = 10;
 
   //pass the nodes and edges to our graph class to instantiate it
   var graphInstance = new Graph(nodeValues, edges);
 
   it('should find the shortest path from A to B', () => {
-    expect(graphInstance.shortestPath(a, b)).to.equal(solution1);
+    expect(graphInstance.shortestPath('a', 'b')).to.equal(solution1);
   });
 
   it('should find the shortest path from C to F', () => {
-    expect(graphInstance.shortestPath(c, f)).to.equal(solution2);
+    expect(graphInstance.shortestPath('c', 'f')).to.equal(solution2);
   });
 
+  it('can figure out if a node is not connected to the graph', () => {
+    expect(graphInstance.shortestPath('a', 'i')).to.equal(undefined);
+  });
 
 });
