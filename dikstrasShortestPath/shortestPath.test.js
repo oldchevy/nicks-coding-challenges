@@ -18,7 +18,6 @@ describe('Dijkstra\'s shortest path finding algorithm', () => {
 
   //pass the nodes and edges to our graph class to instantiate it
   var graphInstance = new Graph(nodeValues, edges);
-  //call shortest path
 
   it('should find the shortest path from A to B', () => {
     expect(graphInstance.shortestPath(a, b)).to.equal(solution1);

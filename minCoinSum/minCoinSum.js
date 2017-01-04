@@ -14,6 +14,7 @@ In England the currency is made up of pound, £, and pence, p, and there are eig
 It is possible to make £2 in the following way:
 
 1 * £1 + 1 * 50p + 2 * 20p + 1 * 5p + 1 * 2p + 3 * 1p
+
 Can you figure out the mininum number of coins needed to make the given amount?
 Note that a "greedy" approach is not guaranteed to work here. As in,
 always taking away the largest coin amount will not always work out.
