@@ -17,7 +17,6 @@ Additionally, some of the tests make use of the new ES6 Javascript language feat
 
 Please feel free to make a PR with test cases for these problems:
 
-* rectangleOverlap
 * quickSort
 * heapClass
 * minCoinSum

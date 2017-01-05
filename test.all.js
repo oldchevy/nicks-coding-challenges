@@ -12,3 +12,4 @@ require('./serializeBST/serializeBST.test.js');
 require('./spaceMining/spaceMining.test.js');
 require('./dijkstrasShortestPath/shortestPath.test.js');
 require('./excelColumns/excelColumns.test.js');
+require('./rectangleOverlap/rectangleOverlap.test.js');
