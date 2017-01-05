@@ -47,8 +47,8 @@ describe('Rectangle Overlap Finder', () => {
     {
       message: 'should find Quadrant 4 overlap',
       rectangle1: [[1, 1], [1, -1], [-1, -1], [-1, 1]],
-      rectangle2: [[0, 0], [0, -4], [-4, 4], [0, 4]],
-      solution: []
+      rectangle2: [[0, 0], [0, -4], [4, -4], [4, 0]],
+      solution: [[0, -1], [0, 0], [1, -1], [1, 0]]
     },
     {
       message: 'should find no overlap from above',
@@ -68,12 +68,10 @@ describe('Rectangle Overlap Finder', () => {
   testCases.forEach(oneCase => {
     it(oneCase.message, () => {
       one = overlapFinder(oneCase.rectangle1, oneCase.rectangle2);
-      if (oneCase.solution === -1) {
-        expect(one).to.equal(-1);
-      } else {
-        one.sort(customComparator);
-        expect(one).to.deep.equal(oneCase.solution);
+      if (one !== -1) {
+        one.sort(customComparator);  
       }
+      expect(one).to.deep.equal(oneCase.solution);
     });
   });
 

@@ -19,7 +19,6 @@ var findOverlap = function(rectangle1, rectangle2) {
   
   //1. comparing upper right to lower left
   if (lowerCorner[0] < higherCorner[0]) {
-      
     //compare lowers upper right to highers lower left
     var top = findPos(lower, 'upperRight');
     var bottom = higherCorner;
@@ -35,7 +34,7 @@ var findOverlap = function(rectangle1, rectangle2) {
     var top = findPos(lower, 'upperLeft');
     var bottom = findPos(higher, 'lowerRight');
     
-    if (bottom[0] >= top [0] || top[1] >= bottom[1]) {
+    if (bottom[0] <= top [0] || top[1] <= bottom[1]) {
       result = -1;
     } else {
       result = [top, bottom, [top[0], bottom[1]], [bottom[0], top[1]]];
@@ -50,7 +49,6 @@ var findOverlap = function(rectangle1, rectangle2) {
 
 var findPos = function(rectangle, direction) {
 
-  // console.log(rectangle, direction);
   var pos = rectangle[0];
   
   rectangle.forEach(coord => {
