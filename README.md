@@ -81,3 +81,7 @@ Please feel free to make a PR with test cases for these problems:
 #####Weave Lists
 
 (linked lists) Given two singly linked lists, do an in-place weave. Zipper them up so that you can do who knows what with it. Seriously I have no clue how this method might be used in real life programming. Anyways make it handle lists of different lengths. In a classic representation of linked lists, you do not have a size variable or a tail pointer like you might be used to.
+
+#####Word Ladder
+
+(graph traversal) An exercise in finding the shortest path, but the graph is not represented in a typical graph format. Instead you are tasked with finding the number of one-character changes to transform one word into another. You must use a valid word in a provided dictionary to make a transformation. You must consider how to find the shortest path, not just any path and also how to find potential graph edges, since they are not built for you as in a typical graph.
