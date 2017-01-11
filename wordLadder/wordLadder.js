@@ -7,6 +7,12 @@ Each intermediate word must exist in the dictionary.
 
 Key point: all words in the dict will be the same length, as will all the two words given as start and end
 
+Given:
+
+start = "hit"
+end = "cog"
+dict = ["hot","dot","dog","lot","log"]
+As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog"
 */
 
 
